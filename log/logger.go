@@ -23,7 +23,7 @@ var globalConfig configer.Configurable
 func Init(opts ...InitOption) error {
 	initOpts := &initOptions{
 		logger: nil,
-		config: config.DefaultConfig,
+		config: config.L(),
 	}
 	for _, opt := range opts {
 		opt.initApply(initOpts)
